@@ -1,0 +1,109 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --bg-color: whitesmoke;
+  --black: #000;
+  --white: #fff;
+  --lila: #c8a2c8;
+  --intro-bg-color: rgba(27, 27, 27, 0.5);
+  --btn-bg: snow;
+  --btn-bg-hover: rgb(231, 229, 229);
+}
+
+body {
+  background-color: var(--lila);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.scroll-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.container {
+  display: inline-block;
+  margin: 0px;
+  white-space: normal;
+  vertical-align: top;
+  flex-shrink: 0;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.card {
+  position: relative;
+  height: 500px;
+  width: 400px;
+  transition: transform 0.3s ease-in-out;
+  display: inline-block;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+
+.card:hover {
+  transform: translateY(-30px);
+}
+
+.card:hover .intro {
+  background-color: var(--intro-bg-color);
+}
+
+.card:hover .intro .description {
+}
+
+.intro {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.intro h2 {
+  color: var(--white);
+  font-size: 42px;
+  padding: 16px;
+}
+
+.intro p {
+  color: var(--white);
+  margin: 16px;
+}
+
+.intro button {
+  width: fit-content;
+  padding: 12px 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.intro:hover button {
+  cursor: pointer;
+  background-color: var(--);
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin-top: 20px; /* Adăugăm un spațiu între carduri */
+  }
+}
